@@ -156,6 +156,7 @@
           <a href="#beranda" onclick="showHome()" class="nav-link hover:text-siega-accent transition-colors relative" data-i18n="nav_home">Beranda</a>
           <a href="#tentang" onclick="showHome()" class="nav-link hover:text-siega-accent transition-colors relative" data-i18n="nav_about">Tentang Kami</a>
           <a href="#perkuliahan" onclick="showHome()" class="nav-link hover:text-siega-accent transition-colors relative" data-i18n="nav_programs">Perkuliahan</a>
+          <a href="#dosen" onclick="showHome()" class="nav-link hover:text-siega-accent transition-colors relative" data-i18n="nav_lecturers">Dosen</a>
           <a href="#kontak" onclick="showHome()" class="nav-link hover:text-siega-accent transition-colors relative" data-i18n="nav_contact">Kontak</a>
 
           <!-- Theme Toggle Button (Desktop) -->
@@ -189,6 +190,7 @@
           <a href="#beranda" onclick="showHome()" class="hover:text-siega-primary dark:hover:text-siega-accent" data-i18n="nav_home">Beranda</a>
           <a href="#tentang" onclick="showHome()" class="hover:text-siega-primary dark:hover:text-siega-accent" data-i18n="nav_about">Tentang Kami</a>
           <a href="#perkuliahan" onclick="showHome()" class="hover:text-siega-primary dark:hover:text-siega-accent" data-i18n="nav_programs">Perkuliahan</a>
+          <a href="#dosen" onclick="showHome()" class="hover:text-siega-primary dark:hover:text-siega-accent" data-i18n="nav_lecturers">Dosen</a>
           <a href="#kontak" onclick="showHome()" class="hover:text-siega-primary dark:hover:text-siega-accent" data-i18n="nav_contact">Kontak</a>
           <a href="#daftar" class="text-siega-primary dark:text-siega-accent font-bold" data-i18n="nav_register">Daftar Sekarang</a>
         </div>
@@ -318,13 +320,13 @@
                   <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2 text-xs"></i> <span data-i18n="card_si_pt2">Audit Sistem Informasi</span></li>
                   <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2 text-xs"></i> <span data-i18n="card_si_pt3">Teknologi Immersive</span></li>
                 </ul>
-                <a
-                  href="detailjurusan.html?prodi=si"
+                <button
+                  onclick="showDetail('si')"
                   class="block text-center w-full py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-bold rounded-lg hover:bg-blue-600 dark:hover:bg-blue-600 hover:text-white dark:hover:text-white transition text-sm"
                   data-i18n="btn_detail"
                 >
                   Lihat Detail Kurikulum
-                </a>
+                </button>
               </div>
             </div>
 
@@ -346,13 +348,13 @@
                   <li class="flex items-start"><i class="fas fa-check text-purple-500 mt-1 mr-2 text-xs"></i> <span data-i18n="card_game_pt2">Kecerdasan Buatan (AI)</span></li>
                   <li class="flex items-start"><i class="fas fa-check text-purple-500 mt-1 mr-2 text-xs"></i> <span data-i18n="card_game_pt3">AR & VR</span></li>
                 </ul>
-                <a
-                  href="detailjurusan.html?prodi=game"
+                <button
+                  onclick="showDetail('game')"
                   class="block text-center w-full py-3 border-2 border-purple-600 text-purple-600 dark:text-purple-400 dark:border-purple-400 font-bold rounded-lg hover:bg-purple-600 dark:hover:bg-purple-600 hover:text-white dark:hover:text-white transition text-sm"
                   data-i18n="btn_detail"
                 >
                   Lihat Detail Kurikulum
-                </a>
+                </button>
               </div>
             </div>
 
@@ -361,7 +363,7 @@
               <div class="h-48 bg-orange-500 relative overflow-hidden">
                 <div class="absolute inset-0 bg-orange-800/50 group-hover:bg-orange-800/30 transition"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1556740758-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="E-Commerce & Digital Payment"
                   class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                 />
@@ -378,13 +380,13 @@
                   <li class="flex items-start"><i class="fas fa-check text-orange-500 mt-1 mr-2 text-xs"></i> <span data-i18n="card_ecom_pt2">Fintech</span></li>
                   <li class="flex items-start"><i class="fas fa-check text-orange-500 mt-1 mr-2 text-xs"></i> <span data-i18n="card_ecom_pt3">Metaverse & E-Marketplace</span></li>
                 </ul>
-                <a
-                  href="detailjurusan.html?prodi=ecommerce"
+                <button
+                  onclick="showDetail('ecommerce')"
                   class="block text-center w-full py-3 border-2 border-orange-500 text-orange-500 dark:text-orange-400 dark:border-orange-400 font-bold rounded-lg hover:bg-orange-500 dark:hover:bg-orange-500 hover:text-white dark:hover:text-white transition text-sm"
                   data-i18n="btn_detail"
                 >
                   Lihat Detail Kurikulum
-                </a>
+                </button>
               </div>
             </div>
 
@@ -406,13 +408,161 @@
                   <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-2 text-xs"></i> <span data-i18n="card_akuntansi_pt2">Audit Teknologi Informasi</span></li>
                   <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-2 text-xs"></i> <span data-i18n="card_akuntansi_pt3">Komputerisasi Akuntansi</span></li>
                 </ul>
-                <a
-                  href="detailjurusan.html?prodi=akuntansi"
+                <button
+                  onclick="showDetail('akuntansi')"
                   class="block text-center w-full py-3 border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400 font-bold rounded-lg hover:bg-emerald-600 dark:hover:bg-emerald-600 hover:text-white dark:hover:text-white transition text-sm"
                   data-i18n="btn_detail"
                 >
                   Lihat Detail Kurikulum
-                </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dosen Section (NEW) -->
+      <section id="dosen" class="py-24 bg-gray-50 dark:bg-gray-900 transition-colors section-spy">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16 fade-in-section">
+            <h2 class="text-siega-primary dark:text-siega-accent font-bold tracking-widest uppercase text-sm mb-2" data-i18n="lecturers_tag">Pengajar Kami</h2>
+            <h3 class="text-4xl font-bold text-gray-900 dark:text-white" data-i18n="lecturers_title">Dosen & Praktisi Ahli</h3>
+            <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="lecturers_desc">Belajar langsung dari para ahli yang berpengalaman di bidang akademik dan industri.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Dosen 1 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/profridwan.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+1&background=random&size=256'" alt="Dosen 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Prof. Dr. Ridwan Sanjaya S.E., S.Kom., MS.IEC.</h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Dekan Fakultas Ilmu Komputer</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dosen 2 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/profberdi.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+2&background=random&size=256'" alt="Dosen 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Dr. Bernadinus Harnadi S.T., M.T.</h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Wakil Dekan Fakultas Ilmu Komputer</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dosen 3 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/pakyoga.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+3&background=random&size=256'" alt="Dosen 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Dr. Albertus Dwiyoga Widiantoro S.Kom., M.Kom.</h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Ketua Program Studi Sistem Informasi</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dosen 4 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/pakandre.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+4&background=random&size=256'" alt="Dosen 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Andre Kurniawan Pamudji S.Kom., M.Ling.</h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Sekretaris Program Studi Sistem Informasi</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dosen 5 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/bustep.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+5&background=random&size=256'" alt="Dosen 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Stephani Inggrit Swastini, S.Kom, MBA </h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Ka. Lab Sistem Informasi</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dosen 6 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/pakcahyo.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+6&background=random&size=256'" alt="Dosen 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Agus Cahyo Nugroho S.Kom., M.T.</h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Dosen Sistem Informasi</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dosen 7 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/pakerdi.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+7&background=random&size=256'" alt="Dosen 7" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Erdhi Widyarto Nugroho S.T., M.T.</h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Dosen Sistem Informasi</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dosen 8 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/bubrenda.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+8&background=random&size=256'" alt="Dosen 8" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Dr. T. Brenda Ch S.T., M.T.</h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Dosen Sistem Informasi</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dosen 9 -->
+            <div class="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden fade-in-section hover:-translate-y-2 transition duration-300">
+              <div class="h-80 bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <img src="assets/pakhendra.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dosen+9&background=random&size=256'" alt="Dosen 9" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Fx. Hendra Prasetya S.T., M.T.</h4>
+                <p class="text-siega-primary dark:text-siega-accent text-sm font-medium mb-3">Dosen Sistem Informasi</p>
+                <div class="flex justify-center space-x-3 text-gray-400">
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-siega-primary transition"><i class="fas fa-envelope"></i></a>
+                </div>
               </div>
             </div>
           </div>
@@ -420,7 +570,6 @@
       </section>
 
       <!-- Why Choose Us / CTA -->
-      <!-- ... -->
       <section class="py-20 bg-siega-dark text-white text-center relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div class="container mx-auto px-6 relative z-10 fade-in-section">
@@ -528,7 +677,69 @@
     </div>
 
     <!-- DETAIL PAGE VIEW (Hidden by Default) -->
-    <div id="detail-view" class="hidden"></div>
+    <div id="detail-view" class="hidden min-h-screen bg-gray-50 dark:bg-gray-900 pt-24 pb-12 transition-opacity duration-300">
+      <div class="container mx-auto px-6">
+        <!-- Back Button -->
+        <button onclick="showHome()" class="mb-8 flex items-center text-siega-primary dark:text-siega-accent font-bold hover:text-siega-accent transition group">
+          <div class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center mr-3 group-hover:scale-110 transition">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <span data-i18n="btn_back">Kembali ke Beranda</span>
+        </button>
+
+        <!-- Dynamic Header -->
+        <div id="detail-header" class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-gray-100 dark:bg-gray-700 rounded-full -mr-32 -mt-32 opacity-50 z-0"></div>
+
+          <div class="flex-1 relative z-10">
+            <span id="detail-tag" class="text-xs font-bold tracking-widest px-3 py-1 rounded bg-blue-100 text-blue-800 uppercase mb-4 inline-block" data-i18n="modal_concentration">KONSENTRASI</span>
+            <h1 id="detail-title" class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Sistem Informasi</h1>
+            <p id="detail-desc" class="text-lg text-gray-600 dark:text-gray-300">Deskripsi singkat tentang jurusan ini akan muncul di sini.</p>
+          </div>
+          <div class="w-full md:w-1/3">
+            <img id="detail-image" src="" alt="Jurusan" class="rounded-xl shadow-lg w-full h-64 object-cover" />
+          </div>
+        </div>
+
+        <!-- Curriculum List -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="md:col-span-2">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"><i class="fas fa-book-open text-siega-accent mr-3"></i> <span data-i18n="modal_subjects">Mata Kuliah Konsentrasi</span></h3>
+              <div id="detail-subjects" class="grid sm:grid-cols-2 gap-4">
+                <!-- Subjects injected via JS -->
+              </div>
+            </div>
+
+            <div class="mt-8 bg-siega-dark rounded-2xl shadow-lg p-8 text-white relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full -mr-10 -mt-10"></div>
+              <h3 class="text-xl font-bold mb-4" data-i18n="modal_career">Prospek Karir</h3>
+              <p id="detail-career" class="text-gray-300 leading-relaxed">
+                <!-- Career text injected via JS -->
+              </p>
+            </div>
+          </div>
+
+          <!-- Sidebar Info -->
+          <div class="md:col-span-1 space-y-6">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border-t-4 border-siega-primary">
+              <h4 class="font-bold text-gray-800 dark:text-white mb-4" data-i18n="sidebar_why">Kenapa Memilih Ini?</h4>
+              <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+                <li class="flex items-start"><i class="fas fa-star text-yellow-400 mt-1 mr-2"></i> <span data-i18n="sidebar_point_1">Kurikulum Internasional</span></li>
+                <li class="flex items-start"><i class="fas fa-star text-yellow-400 mt-1 mr-2"></i> <span data-i18n="sidebar_point_2">Sertifikasi Profesi</span></li>
+                <li class="flex items-start"><i class="fas fa-star text-yellow-400 mt-1 mr-2"></i> <span data-i18n="sidebar_point_3">Magang di Perusahaan Top</span></li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl p-8 text-center">
+              <h4 class="font-bold text-gray-800 dark:text-white mb-2" data-i18n="sidebar_cta_title">Tertarik Bergabung?</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mb-4" data-i18n="sidebar_cta_desc">Daftarkan dirimu segera dan dapatkan beasiswa potongan.</p>
+              <a href="#daftar" onclick="showHome()" class="block w-full py-3 bg-siega-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition shadow" data-i18n="nav_register">Daftar Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
@@ -537,7 +748,7 @@
           <span class="text-2xl font-bold text-white tracking-wider">SIEGA</span>
           <span class="text-sm block mt-1" data-i18n="footer_subtitle">Program Studi Sistem Informasi</span>
         </div>
-        <p class="text-sm mb-6">Fakultas Ilmu Komputer | Unika Soegijapranata Semarang | Phone: 0819-0338-5595 | Email: siega@unika.ac.id</p>
+        <p class="text-sm mb-6">Fakultas Ilmu Komputer | Unika Soegijapranata Semarang | Phone: 0819-0338-5595 | Email: si@unika.ac.id</p>
         <div class="flex justify-center space-x-6 text-sm">
           <a href="#" class="hover:text-white transition">Privacy Policy</a>
           <a href="#" class="hover:text-white transition">Copyright © 2025 SIEGA</a>
@@ -559,6 +770,7 @@
           nav_home: "Beranda",
           nav_about: "Tentang Kami",
           nav_programs: "Perkuliahan",
+          nav_lecturers: "Dosen",
           nav_contact: "Kontak",
           nav_register: "Daftar Sekarang",
           hero_title_1: "Inovasi",
@@ -580,6 +792,9 @@
           programs_tag: "Program Studi",
           programs_title: "4 Konsentrasi Unggulan",
           programs_desc: "Kurikulum dirancang spesifik untuk menjawab tantangan industri digital masa kini.",
+          lecturers_tag: "Pengajar Kami",
+          lecturers_title: "Dosen & Praktisi Ahli",
+          lecturers_desc: "Belajar langsung dari para ahli yang berpengalaman di bidang akademik dan industri.",
           card_highlight: "Highlight Kuliah:",
           btn_detail: "Lihat Detail Kurikulum",
           // Card Titles & Desc hardcoded in HTML via data-i18n
@@ -635,6 +850,7 @@
           nav_home: "Home",
           nav_about: "About Us",
           nav_programs: "Programs",
+          nav_lecturers: "Lecturers",
           nav_contact: "Contact",
           nav_register: "Register Now",
           hero_title_1: "Digital",
@@ -655,6 +871,9 @@
           programs_tag: "Study Programs",
           programs_title: "4 Top Concentrations",
           programs_desc: "Curriculum designed specifically to answer the challenges of today's digital industry.",
+          lecturers_tag: "Our Faculty",
+          lecturers_title: "Expert Lecturers & Practitioners",
+          lecturers_desc: "Learn directly from experts experienced in both academia and industry.",
           card_highlight: "Course Highlights:",
           btn_detail: "View Curriculum Details",
           card_si_title: "Information Systems",
@@ -882,15 +1101,12 @@
         const data = prodiData[key];
         if (!data) return;
 
-        const detailView = document.getElementById("detail-view");
-        if (!detailView) {
-          window.location.href = `detailjurusan.html?prodi=${key}`;
-          return;
-        }
-
+        // Determine current language text
         const lang = currentLang;
 
+        // Update Content
         document.getElementById("detail-title").textContent = data.title[lang];
+        // Added dark:text-white
         document.getElementById("detail-title").className = `text-4xl md:text-5xl font-extrabold text-${data.color}-700 dark:text-${data.color}-400 mb-4`;
 
         document.getElementById("detail-tag").textContent = data.tag[lang];
@@ -900,27 +1116,31 @@
         document.getElementById("detail-image").src = data.image;
         document.getElementById("detail-career").textContent = data.career[lang];
 
+        // Update Subjects List
         const listContainer = document.getElementById("detail-subjects");
-        listContainer.innerHTML = "";
+        listContainer.innerHTML = ""; // Clear old
         data.subjects[lang].forEach((subject) => {
           const item = document.createElement("div");
+          // Added dark:bg-gray-700 dark:border-gray-600
           item.className = "flex items-center p-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-100 dark:border-gray-600";
           item.innerHTML = `<i class="fas fa-check-circle text-${data.color}-500 mr-3"></i><span class="text-gray-700 dark:text-gray-200 font-medium text-sm">${subject}</span>`;
           listContainer.appendChild(item);
         });
 
-        const homeView = document.getElementById("home-view");
-        if (homeView) {
-          homeView.classList.add("hidden");
-        }
+        // Transition
+        document.getElementById("home-view").classList.add("hidden");
+        const detailView = document.getElementById("detail-view");
         detailView.classList.remove("hidden");
 
+        // Scroll top
         window.scrollTo({ top: 0, behavior: "smooth" });
 
+        // Adjust Navbar style for detail page (force solid)
         const navbar = document.getElementById("navbar");
         navbar.classList.add("glass-nav", "text-gray-800");
         navbar.classList.remove("text-white", "bg-transparent");
 
+        // Handle dark mode text for navbar in detail view
         if (document.documentElement.classList.contains("dark")) {
           navbar.classList.add("text-gray-100");
           navbar.classList.remove("text-gray-800");
